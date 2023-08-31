@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="icon" href="icon.jpeg">
+    <link rel="stylesheet" href="zomato.css">
+    <title>Zomato UI/UX</title>
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Oswald:wght@300&family=Playfair+Display&family=Poppins:wght@100;400&display=swap");
+
+body {
+  padding: 0;
+  margin: 0 auto;
+  text-decoration: none;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+header {
+  background-image: url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png");
+  font-family: "Poppins", sans-serif;
+  background-position: center;
+  background-size: cover;
+  height: 65vh;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  object-fit: cover;
+}
+
+/* 
+=================
+   navigation
+=================
+ */
+
+.nav {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: azure;
+  font-family: "Poppins", sans-serif;
+  /* font-size: 2rem; */
+  margin: 1vh 10vw;
+}
+
+.nav-bar {
+  display: flex;
+}
+
+.nav a {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  font-weight: 1em;
+  padding-top: 10px;
+  justify-items: normal;
+}
+
+.nav-bar li {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: lighter;
+  padding-left: 30px;
+  list-style: none;
+}
+
+/*
+==================================
+head with logo, desc and searchbar 
+===================================
+
+*/
+
+.head {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  object-fit: contain;
+  transform: none;
+  opacity: 1;
+  width: 30%;
+  margin-top: 3rem;
+  color: white;
+  display: flex;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  align-items: center;
+  color: azure;
+  flex-wrap: wrap;
+}
+
+.head h3 {
+  display: flex;
+  align-items: center;
+  font-size: 2.1rem;
+  text-align: center;
+  flex-wrap: wrap;
+  color: white;
+  font-weight: 100;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*
+====================
+ Search bar styling 
+====================
+ */
+
+
+
+.search {
+  width: calc(100% - 10em);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: flex-start;
+}
+
+
+.search-tile {
+  display: flex;
+  width: 100%;
+  height: 3em;
+  background: rgb(255, 255, 255);
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  box-shadow: rgba(28, 28, 28, 0.05) 0px 8px 12px;
+  margin-bottom: 0.8rem;
+}
+
+.search-left,
+.search-right {
+  width: 100%;
+  display: flex;
+  padding: 2em 1em;
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  letter-spacing: 1px;
+}
+
+.fa-location-dot 
+.fa-magnifying-glass,
+.fa-caret-down 
+{
+  font-size: 1.5rem;
+}
+
+.fa-location-dot {
+  color: red;
+  opacity: 0.5;
+}
+
+.fa-caret-down {
+  padding: 0 10px;
+  color: gray;
+}
+
+
+/* 
+=================
+ Middle section 
+=================
+ */
+.middle {
+  position: relative;
+  max-width: 110rem;
+  max-height: initial;
+  margin: 1em 5em;
+}
+
+.sec-1 {
+  width: 100%;
+  display: flex;
+  margin: 2em 0;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.boxes {
+  flex-grow: 0;
+  flex-shrink: 0;
+  max-width: 30%;
+  padding: 0 10px 10px 0;
+}
+
+ a {
+  text-decoration: none;
+}
+
+
+.box {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+  width: 100%;
+  height: 24rem;
+  outline: 1px solid rgba(208, 201, 201, 0.445);
+  transition: .1s;
+}
+
+.box:hover{
+ -webkit-transform: scale(1.03) ;
+  
+}
+
+.white {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 30%;
+  width: 100%;
+  border-radius: 0 0 1em 1em;
+  overflow: hidden;
+  background-color: white;
+  padding: 0 2rem 1rem 1.5rem;
+  box-sizing: border-box;
+  
+}
+
+.white strong {
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #363636;
+  font-weight: 500;
+
+}
+
+.white p {
+  color: #4F4F4f;
+  font-weight: 400;
+
+}
+
+
+
+
+
+/*
+===================
+section-2 of middle
+===================
+*/
+
+
+.sec-2 h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: lighter;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sec-2 div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+
+.sec-2 span , .sec-2 span i {
+  color: rgb(246, 76, 24);
+  cursor: pointer;
+}
+
+
+.sec-2 h6 {
+  margin: 0;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: lighter;
+  color: rgb(99, 99, 98);
+}
+
+.sec2-children {
+  margin: 2em 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  flex-grow: 0 !important;
+  cursor: pointer;
+  flex-shrink: 0 !important;
+  -webkit-box-flex: 0;
+  margin: 0 1em 2em 0;
+  flex-basis: 23%;
+  transition: .8s linear;
+  height: 20em;
+}
+
+.social-links a , .card a{
+    text-decoration: none;
+  
+}
+
+.card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  z-index: -1;
+ 
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(2,2,2,0.1), rgba(2,2,2,0.9));
+  position: absolute;
+  top: 0; 
+  left: 0;
+
+}
+
+.card .sub-title{
+  padding: 0 1em 1em 1em;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+  color: #FFFF;
+}
+.card .sub-title:first-child {
+  overflow: hidden;
+  font-weight: 400;
+}
+.card .sub-title:last-child {
+  font-weight: 200;
+}
+
+
+
+/*
+====================
+localities around 
+=====================
+
+*/
+
+.title{
+  font-size: 2rem;
+  font-weight:100;
+}
+
+
+.bold {
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+
+.box-3, .box-2 {
+  display:grid;
+  gap: 2em;
+  grid-auto-flow: row;
+  flex-grow: 1;
+}
+
+.box-3 .col , .box-2 .col {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding: 18px 22px ;
+  width: 100%;
+  box-shadow: rgba(28, 28, 28, .09) 0px 2px 3px;
+  height: 100%;
+
+}
+
+/*  
+  ===================
+    Contact Form 
+  ===================
+
+*/
+
+.sec-4{
+  padding-block: 5em ;
+  width: 100%;
+  margin: 5em 0;
+  background:linear-gradient(5turn, #9493cf, #ebf8e1e1, #f63f3c);
+}
+
+
+.sec-4 .wrapper{
+  padding: 5rem 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.address {
+  height: fit-content;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+
+}
+
+.sec-4 h2 {
+  text-align: start;
+  font-size: 3rem;
+  font-weight: 400;
+
+}
+
+.sec-4 p {
+  text-align: start;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+
+.flex-radio{
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.input{
+  font-size: 1.3rem;
+  padding-right: 1em;
+  background-color: none;
+}
+
+input[type="radio"] {
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+
+}
+
+input[type="radio"]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: 42%;
+  margin-top: -8px;
+  border: 2px solid #fd0606;
+  border-radius: 50%;
+
+}
+
+
+
+input[type="radio"]:checked{
+    position: relative;
+}
+
+input[type="radio"]:checked::after{
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 0;
+    margin: auto auto;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: #f63f3c;
+
+}
+
+
+
+.flex-input{
+  display: flex;
+  -webkit-box-align: start;
+  align-items: center;
+  margin-top: 1em;
+  gap: 1em;
+}
+
+
+.flex-input input {
+  padding: 13px 12px;
+  border: .5px solid #6f6d6d;
+  border-radius:5px;
+  color: #FFFF;
+  font-weight: 300;
+}
+
+.flex-input button {
+  border: none;
+  cursor: pointer;
+  background: #f63f3c;
+  color: #FFFF;
+  border-radius: 5px;
+  padding:12px 18px ;
+
+}
+
+.flex-app{
+  margin: 0;
+  display: flex;
+
+}
+
+.flex-app img {
+  cursor: pointer;
+  height: 3rem;
+  width: 11rem;
+}
+/*  
+  ===================
+  Explore options near me 
+  <details><summary>
+  ===================
+  
+*/
+.box-3{
+    gap: 3rem;
+
+}
+.box-3 .col {
+    background-color: white;
+
+}
+details {
+    color: #000000;
+    display: inline-block;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 300;
+}
+summary{
+    color: black;
+    padding-bottom: 1em;
+    font-size: 1.6rem;
+    font-weight: 500;
+
+}
+
+
+.grey{
+  background-color: rgb(201 197 197);
+  padding: 5em 1em;
+}
+
+.grey h2 {
+  text-align: start;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.grey p {
+ font-size: 2rem;
+  font-weight: 400;
+  color: rgb(28, 28, 28);
+  font-size: 20px;
+  line-height: 26px;
+  margin: 0px;
+}
+
+.sec-5 {
+  display: block;
+  gap: 2em;
+
+}
+
+/*  
+  ===================
+  footer options
+  ===================
+  
+*/
+
+.footer{
+  margin-top: 7rem;
+}
+.footer-logo img{
+  margin: 2rem 0;
+  width: 10rem;
+  image-rendering: -webkit-optimize-contrast;
+ 
+}
+
+
+
+
+.flex-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+.footer-header{
+  color: #000;
+  font-size: 1rem;
+  font-weight:400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.footer p {
+  font-stretch:wider ;
+  letter-spacing: 1px;
+  font-size: .9rem;
+  font-weight: 200;
+  color: #696969;
+}
+.footer p:hover{
+  cursor: pointer;
+  color: #4F4F4f;
+}
+
+
+.social-links a {
+  color: rgb(19, 18, 22);
+  font-size: 1.5rem;
+  
+}
+
+
+hr{
+  color: rgb(221,221,221);
+  margin: 2em 0;
+}
+
+
+.copyright {
+  margin: 2em 0 ;
+}
+
+
+
+/*
+===================
+   Media Queries
+==================
+*/
+
+@media screen and (min-width: 600px) {
+  .search{
+    display: flex;
+
+  }
+ 
+  .widht30{
+    border-radius: 10px 0 0 10px;
+  }
+
+  .width70{
+    border-radius: 0 10px 10px 0 ;
+  }
+  .box-2 {
+    grid-template-columns: repeat(3 , 1fr);
+
+  }
+
+}
+
+
+@media screen and (max-width: 700px) {
+  .nav {
+    display: none;
+  }
+  .head {
+    margin-top: 0;
+  }
+  .head h3 {
+    margin-top: 20px;
+    flex-grow: 1;
+    font-size: 2rem;
+    width: cal(100vw - 2rem);
+  }
+
+  .search {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-tile{
+    border-radius: 0.8rem;
+  }
+
+  .middle{
+    margin: 1em 1em;
+
+  }
+
+  .boxes{
+    max-width: 80%;
+    margin-bottom: 2em;
+  }
+  .card{
+     min-width: 40%;
+     margin: 0 1em 1em 0;
+    } 
+
+    .flex-row {
+      flex-direction: column;
+    }
+
+    .flex-contact img{
+      display: none;
+    }
+    .flex-input {
+      margin: 1em;
+      display: block;
+    }
+    .flex-app {
+      display: block;
+      padding: 1em;
+    }
+
+}
+</style>
+
+<body>
+    <header>
+        <div class="nav">
+            <div><a href="#"><i class="fa-solid fa-square-arrow-up-right"></i> &nbsp; Get you App</a> </div>
+            <ul class="nav-bar">
+                <li><a href="#">Investor Relation</a></li>
+                <li><a href="#">Add Restaurant</a></li>
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </div>
+
+        <div class="head">
+            <img class="logo" src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png"
+                alt="logo">
+            <h3>Discover the best food & drinks in Chennai</h3>
+            <!-- search bar -->
+            <div class="search">
+                <div class="search-tile widht30">
+                    <div class="search-left">
+                        <i class="fa-solid fa-location-dot "></i>
+                        <input class="search-input" type="text" placeholder="Chennai">
+                    </div>
+                    <div><i class="fa-solid fa-caret-down"></i></div>
+                </div>
+
+                <div class="search-tile width70">
+                    <div class="search-right">
+                        <i class="fa-solid fa-magnifying-glass large"></i>
+                        <input class="search-input" type="text" placeholder="Search for restaurants, cuisine or a dish">
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <section class="middle">
+        <!-- three boxes after the header -->
+        <div class="sec-1">
+            <div class="boxes">
+                <a href="#">
+                    <div class="box">
+                        <img src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"
+                            style="width: 100%; height: 80%;" alt="image">
+                        <div class="white">
+                            <p><strong>online order</strong></p>
+                            <p>Stay home and order to your doorstep.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="boxes">
+                <a href="#">
+                    <div class="box">
+                        <img src="https://b.zmtcdn.com/webFrontend/d026b357feb0d63c997549f6398da8cc1647364915.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"
+                            alt="image" style="width: 100%; height: 80%;">
+                        <div class="white">
+                            <p><strong>Dining</strong></p>
+                            <p>View the cities favourite dining Venue.</p>
+                        </div>
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="boxes">
+                <a href="#">
+                    <div class="box">
+                        <img src="https://b.zmtcdn.com/webFrontend/d9d80ef91cb552e3fdfadb3d4f4379761647365057.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"
+                            alt="image" style="width: 100%; height: 80%;">
+                        <div class="white">
+                            <p><strong>Nightlife and Clubs</strong></p>
+                            <p>Explore the cities top nightlife outlet</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Collections-->
+        <div class="sec-2">
+            <h2>Collections</h2>
+            <div>
+                <h6>Explore curated lists of top restaurants, cafes, pubs, and bars in Chennai, based on trends</h6>
+                <span>All collection in Chennai &nbsp; <i class="fas fa-caret-right"></i></span>
+            </div>
+        </div>
+
+        <div class="sec2-children">
+            <div class="card">
+                <a href="#">
+                    <img src="images/onam.png" alt="image" style="width: 100%; height: 100%;">
+                    <div class="sub-title">Onam Feast <br>
+                        <span> 17 Places &nbsp; <i class="fas fa-caret-right"></i></span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="#">
+                    <img src="images/Diwali.png" alt="image" style="width: 100%; height: 100%;">
+                    <div class="sub-title"><span>Diwali buffets <br> 19 Places</span> &nbsp; <i
+                            class="fas fa-caret-right"></i></div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="#">
+                    <img src="images/Cafe.png" alt="image" style="width: 100%; height: 100%;">
+                    <div class="sub-title"><span>picturisque cafes <br> 18 Places</span>&nbsp; <i
+                            class="fas fa-caret-right"></i></div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <img src="images/Romanic.png" alt="image" style="width: 100%; height: 100%;">
+                    <div class="sub-title"><span>Romantic dining <br> 29 Places</span>&nbsp; <i
+                            class="fas fa-caret-right"></i></div>
+                </a>
+            </div>
+        </div>
+        </div>
+        <br><br>
+        <!-- Localities Near You section -->
+        <div class="loacalities">
+            <div class="title">
+                <h2>Popular localities in and around <strong>Chennai</strong></h2>
+            </div>
+
+            <div class="sec-3">
+                <div class="box-2">
+
+                    <div class="col">
+                        <div><span class="bold">T. nagar</span><br><span>234 Places</span></div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+
+                    <div class="col">
+                        <div><span class="bold">Nugubakkam</span><br><span>234 Places</span></div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+
+                    <div class="col">
+                        <div><span class="bold">Velacherry</span><br><span>234 Places</span></div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+
+                    <div class="col">
+                        <div><span class="bold">Adyar</span><br><span>234 Places</span></div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+
+                    <div class="col">
+                        <div><span class="bold">Anna Nagar East</span><br><span>234 Places</span></div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+
+                    <div class="col">
+                        <div><span class="bold">Thuraipakkam</span><br><span>234 Places</span></div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+
+                    <div class="col">
+                        <div><span class="bold">Mylapore</span><br><span>234 Places</span></div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+
+                    <div class="col">
+                        <div><span class="bold">Alwarpet</span><br><span>234 Places</span></div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+
+                    <div class="col">
+                        <div><span class="bold">See more</span></div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </section>
+
+    <!-- ConTact Section -->
+    <section class="bgcolor">
+        <div class="sec-4">
+            <div class="wrapper">
+                <img src="https://b.zmtcdn.com/data/o2_assets/f773629053b24263e69f601925790f301680693809.png "
+                    alt="phoneOrder" style="height: 16rem;width: 13rem;">
+                <div class="address">
+                    <h2>Get the Zomato app</h2>
+                    <p>We will send you a link, open it on your phone to download the app</p>
+                    <div class="flex-radio">
+                        <div class="input">
+                            <input type="radio" name="radio" id="phone" value="phone" checked>
+                            <label for="phone">Phone</label>
+                        </div>
+                        <div class="input">
+                            <input are type="radio" name="radio" value="email" id="email">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="flex-input">
+                        <input type="email" name="Email" id="Email" placeholder="Enter Phone Number">
+                        <button type="button">Share App Link</button>
+                    </div>
+                    <p class="download">Download app from</p>
+                    <div class="flex-app">
+                        <div>
+                            <img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png"
+                                alt="app"
+                            </div>
+                            <div>
+                            <img
+                                src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png"
+                                alt="app">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Explore Options near me -->
+    <div class="grey">
+        <section class="middle">
+            <h2>Explore options near me</h2>
+            <div class="sec-5">
+                <div class="box-3">
+                    <div class="col">
+                        <details>
+                            <summary>Popular cuisines near me</summary>
+            
+                                Bakery food near meBeverages food near meBiryani food near meBurger food near meChettinad food near meChinese food near meDesserts food near meIce Cream food near meJuices food near meLebanese food near meMomos food near meMughlai food near meNorth Indian food near mePizza food near meSandwich food near meSeafood food near meShake food near meSichuan food near meSouth Indian food near meStreet food near me
+                            
+                        </details>
+                    </div>
+
+
+                    <div class="col">
+                        <details>
+                            <summary>Popular cuisines near me</summary>
+            
+                                Bakery food near meBeverages food near meBiryani food near meBurger food near meChettinad food near meChinese food near meDesserts food near meIce Cream food near meJuices food near meLebanese food near meMomos food near meMughlai food near meNorth Indian food near mePizza food near meSandwich food near meSeafood food near meShake food near meSichuan food near meSouth Indian food near meStreet food near me
+                            
+                        </details>
+                    </div>
+
+
+                    <div class="col">
+                        <details>
+                            <summary>Popular cuisines near me</summary>
+            
+                                Bakery food near meBeverages food near meBiryani food near meBurger food near meChettinad food near meChinese food near meDesserts food near meIce Cream food near meJuices food near meLebanese food near meMomos food near meMughlai food near meNorth Indian food near mePizza food near meSandwich food near meSeafood food near meShake food near meSichuan food near meSouth Indian food near meStreet food near me
+                            
+                        </details>
+                    </div>
+
+
+                    <div class="col">
+                        <details>
+                            <summary>Popular cuisines near me</summary>
+            
+                                Bakery food near meBeverages food near meBiryani food near meBurger food near meChettinad food near meChinese food near meDesserts food near meIce Cream food near meJuices food near meLebanese food near meMomos food near meMughlai food near meNorth Indian food near mePizza food near meSandwich food near meSeafood food near meShake food near meSichuan food near meSouth Indian food near meStreet food near me
+                            
+                        </details>
+                    </div>
+                        
+
+            </div>
+
+
+        </section>
+    </div>
+
+<!-- Footer -->
+    <footer class="middle">
+        <div class="footer">
+            <div class="footer-logo">
+                <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*"
+                    alt="logo">
+            </div>
+            <div class="flex-row">
+                <div class="column">
+                    <h2 class="footer-header">About Zomato</h2>
+                    <div>
+                        <p class="anchor-links">Who We Are</p>
+                        <p class="anchor-links">Blog</p>
+                        <p class="anchor-links">Work With Us</p>
+                        <p class="anchor-links">Investor Relations</p>
+                        <p class="anchor-links">Report Fraud</p>
+                        <p class="anchor-links">Contact Us</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h2 class="footer-header">Zomaverse</h2>
+                    <div>
+                        <p class="anchor-links">Zomato</p>
+                        <p class="anchor-links">Blinkit</p>
+                        <p class="anchor-links">Feeding India</p>
+                        <p class="anchor-links">Hyper Pure</p>
+                        <p class="anchor-links">Zomaland</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h2 class="footer-header">For restaurants</h2>
+                    <div>
+                        <p class="anchor-links">Partner With Us</p>
+                        <p class="anchor-links">Apps For You</p>
+                    </div>
+                    <br>
+                    <h2 class="footer-header">For enterprises</h2>
+                    <div>
+                        <p class="anchor-links">Zomato For Enterprises</p>
+
+                    </div>
+                </div>
+                <div class="column">
+                    <h2 class="footer-header">Learn More</h2>
+                    <div>
+                        <p class="anchor-links">Privacy</p>
+                        <p class="anchor-links">Security</p>
+                        <p class="anchor-links">Terms</p>
+                        <p class="anchor-links">Sitemap</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h2 class="footer-header">Social Links</h2>
+                    <div class="social-links">
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <div class="flex-app">
+                        <a href="">
+                            <img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png"
+                                alt="app"></a>
+                        <a href=""><img
+                                src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png"
+                                alt="app"></a>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+
+            <div class="copyright">
+                <p> By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and
+                    Content Policies. All trademarks are properties of their respective owners. 2008-2023 © Zomato™ Ltd.
+                    All rights reserved.</p>
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+</body>
+</html>
